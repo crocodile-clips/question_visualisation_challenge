@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>D3 Test</title>
+        <script type="text/javascript" src="d3/d3.js"></script>
+        <style type="text/css">
+
+        </style>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var width = 80
+            var height = 80
+
+            //Create SVG element
+            var svg = d3.select("body")
+                  .append("svg")
+                  .attr("width", width)
+                  .attr("height", height)
+
+            //Corners of triangle
+            var point1 = {x: 5,  y: 5}
+            var point2 = {x: 5,  y: 60}
+            var point3 = {x: 45, y: 45}
+
+            //Draw 3 lines
+            svg.append("line")
+               .attr("x1", point1.x)
+               .attr("y1", point1.y)
+               .attr("x2", point2.x)
+               .attr("y2", point2.y)
+               .attr("style","stroke:black;stroke-width:1")
+
+            svg.append("line")
+               .attr("x1", point2.x)
+               .attr("y1", point2.y)
+               .attr("x2", point3.x)
+               .attr("y2", point3.y)
+               .attr("style","stroke:black;stroke-width:1")
+
+            svg.append("line")
+               .attr("x1", point3.x)
+               .attr("y1", point3.y)
+               .attr("x2", point1.x)
+               .attr("y2", point1.y)
+               .attr("style","stroke:black;stroke-width:1")
+        </script>
+    </body>
+</html>
+
+
